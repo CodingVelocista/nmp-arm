@@ -4,7 +4,8 @@
     "metadata": {
         "creationTimestamp": null,
         "labels": {
-            "app": "arm-nginx-reverse-proxy"
+            "app": "arm-nginx-reverse-proxy",
+            "template.openshift.io/template-instance-owner": "7f35cbbb-db30-11e9-aa2d-005056832285"
         },
         "name": "arm-nginx-reverse-proxy",
         "selfLink": "/apis/build.openshift.io/v1/namespaces/agri-nmp-tools/buildconfigs/arm-nginx-reverse-proxy"
@@ -22,7 +23,7 @@
         "resources": {},
         "runPolicy": "Serial",
         "source": {
-            "contextDir": "app/backend/config/nginx",
+            "contextDir": "app/backend",
             "git": {
                 "ref": "release",
                 "uri": "https://github.com/bcgov/nmp-arm.git"
@@ -34,7 +35,7 @@
                 "env": [
                     {
                         "name": "NGINX_PROXY_URL",
-                        "value": "8080"
+                        "value": "nmp-arm:5000"
                     }
                 ],
                 "from": {
@@ -56,8 +57,5 @@
                 "type": "ImageChange"
             }
         ]
-    },
-    "status": {
-        "lastVersion": 1
     }
 }

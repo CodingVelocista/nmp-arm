@@ -85,7 +85,7 @@
             "name": "EMAIL_PORT",
             "displayName": "Email Port",
             "description": "",
-            "value": "587"
+            "value": "25"
         },
         {
             "name": "EMAIL_HOST_USER",
@@ -115,7 +115,7 @@
             "name": "WEASYPRINT_URL",
             "displayName": "Weasyprint URL",
             "description": "Weasy Print Host Address",
-            "value": "${NAME}-weasyprint"
+            "value": "arm-web-weasyprint"
         },
         {
             "name": "STATIC_FILES_PATH",
